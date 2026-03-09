@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalog>
+    <Book id="B01">
+        <Title>The Pragmatic Programmer</Title>
+        <Author>David Thomas</Author>
+        <PublishYear>1999</PublishYear>
+        <Price>45.50</Price>
+    </Book>
+
+    <Book id="B02">
+        <Author>Anonymous</Author>
+        <PublishYear>2024</PublishYear>
+        <Price>Free</Price> 
+    </Book>
+</Catalog>

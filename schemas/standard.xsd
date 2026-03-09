@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Catalog">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Book" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Title" type="xs:string"/>
+                            <xs:element name="Author" type="xs:string"/>
+                            <xs:element name="PublishYear" type="xs:int"/>
+                            <xs:element name="Price" type="xs:decimal"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
