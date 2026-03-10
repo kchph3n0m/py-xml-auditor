@@ -3,6 +3,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class XMLValidatorService:
     def __init__(self, xsd_file_path):
         self.xsd_path = xsd_file_path

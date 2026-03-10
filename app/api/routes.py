@@ -4,8 +4,11 @@ import aiofiles, os, tempfile
 
 from app.models.api_models import ValidationResponse
 from app.services.xml_validator import XMLValidatorService
-
-validator_service = XMLValidatorService("schemas/standard.xsd")
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+XSD_PATH = os.path.join(os.path.dirname(CURRENT_DIR), "..", "schemas", "standard.xsd")
+if not os.path.exists(XSD_PATH):
+    XSD_PATH = "/app/schemas/standard.xsd"
+validator_service = XMLValidatorService(XSD_PATH)
 router = APIRouter()
 
 @router.post("/validate", response_model=ValidationResponse)
