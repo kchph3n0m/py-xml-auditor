@@ -4,11 +4,10 @@ metadata:
   name: xml-auditor-service
 spec:
   selector:
-    app:xml-auditor-pod
-
+    app: xml-auditor
+  type: NodePort
   ports:
   - protocol: TCP
     port: 80
     targetPort: 8000
-
-type: ClusterIP
+    nodePort: 30080
