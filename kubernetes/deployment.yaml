@@ -8,17 +8,17 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: xml-auditor-pod
+      app: xml-auditor
   template:
     metadata:
       labels:
-        app: xml-auditor-pod
+        app: xml-auditor
     spec:
       containers:
       - name: xml-auditor-container
       image: ghcr.io/kchph3n0m/py-xml-auditor:latest
       ports:
-      - conatinerPort: 8000
+      - containerPort: 8000
       livenessProbe:
         httpGet:
           path: /health
