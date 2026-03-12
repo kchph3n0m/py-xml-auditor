@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: xml-auditor-container
-      image: ghcr.io/kchph3n0m/py-xml-auditor:latest
-      ports:
-      - containerPort: 8000
-      livenessProbe:
-        httpGet:
-          path: /health
-          port: 8000
-        initialDelaySeconds: 5
-        periodSeconds: 10
+        image: ghcr.io/kchph3n0m/py-xml-auditor:latest
+        ports:
+        - containerPort: 8000
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
